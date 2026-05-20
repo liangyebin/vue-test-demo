@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 测试项目 - 自动化部署成功</title>
+    <!-- Vue CDN（零依赖，无需下载） -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        #app { text-align: center; margin-top: 50px; font-size: 24px; color: #2c3e50; }
+        .success { color: #42b983; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 class="success">{{ title }}</h1>
+        <p>{{ msg }}</p>
+        <p>✅ Jenkins 自动部署成功！</p>
+        <p>✅ Nginx 运行正常！</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Vue 自动化测试项目',
+                msg: '环境：Node.js + NVM + Jenkins + Nginx'
+            }
+        })
+    </script>
+</body>
+</html>
+
