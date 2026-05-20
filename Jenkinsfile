@@ -4,7 +4,7 @@ pipeline {
         // 1. 拉取GitHub代码
         stage('拉取代码') {
             steps {
-                git url: 'https://github.com/liangyebin/vue-test-demo'
+                git url: 'https://github.com/liangyebin/vue-test-demo', branch: 'main'
             }
         }
 
