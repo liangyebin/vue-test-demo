@@ -4,7 +4,7 @@ pipeline {
         // 1. 拉取GitHub代码
         stage('拉取代码') {
             steps {
-                git url: '【替换成你的GitHub仓库地址】', credentialsId: '【替换成Jenkins凭证ID】'
+                git url: 'https://github.com/liangyebin/vue-test-demo'
             }
         }
 
