@@ -12,7 +12,9 @@ pipeline {
         stage('切换Node环境') {
             steps {
                 sh '''
-                    # 切换Node 20（老项目改 nvm use 10）
+                    #!/bin/bash
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
                     nvm use 20
                     node -v
                     npm -v
