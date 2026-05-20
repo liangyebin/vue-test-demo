@@ -12,8 +12,6 @@ pipeline {
         stage('切换Node环境') {
             steps {
                 sh '''
-                    # 加载nvm（必须加，否则Jenkins找不到nvm）
-                    source /root/.nvm/nvm.sh
                     # 切换Node 20（老项目改 nvm use 10）
                     nvm use 20
                     node -v
